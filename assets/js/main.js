@@ -30,3 +30,37 @@ if( parola == parolaReverse){
 }else{
     console.log(`La parola: ${parola} NON è palindroma`)
 }
+
+// ***************** Pari o Dispari ***********************
+
+let sceltaUtente = prompt('scegli pari o dispari')
+let numeroUtente = parseInt(prompt('inserisci un numero da 1 a 5'))
+
+function numeroRandom(max, min){
+    return Math.floor(Math.random()* max) + min
+}
+
+let numeroPc = numeroRandom (1,5);
+console.log (`numero scelta utente: ${sceltaUtente}`)
+console.log (`numero computer: ${numeroPc}`)
+console.log (`numero utente: ${numeroUtente}`)
+
+
+let somma = numeroPc + numeroUtente;
+console.log (`somma numeri: ${somma}`)
+
+
+function pariDispari(x){
+    if (x % 2 == 0 ){
+        return 'pari'
+    }else{
+        return 'dispari'
+    }
+}
+
+if(pariDispari(somma)== sceltaUtente){
+    console.log (' ha vinto la persona ')
+}else{
+    console.log (' ha vinto il pc ')
+
+}
